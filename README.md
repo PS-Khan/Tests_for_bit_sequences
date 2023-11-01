@@ -2,5 +2,7 @@
 Run:
 
 cd to main folder
+
 make
+
 ./tests
