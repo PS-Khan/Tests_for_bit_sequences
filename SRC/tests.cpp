@@ -32,7 +32,7 @@ void Tests::SplitAndStoreSequence() {
         // Extract and store each 32-bit part of the sequence
         bitSequenceParts.push_back(bitSequence.substr(i, 32));
     }
-    // Clear the original bitSequence
+    
     bitSequence.clear();
 
     
@@ -104,7 +104,7 @@ bool Tests:: Poker(){
     int m =4;
     int k =8;
     std::vector<int> ni(16, 0);
-    bool isRandom = true; // Assume it's random by default
+    bool isRandom = true; 
 
     for (const std::string &part : bitSequenceParts) { // part - 32 bits
         for (size_t i = 0; i <= Y - m; i += m) {
@@ -186,16 +186,16 @@ bool Tests::SeriesTest() {
 
     for (int count : onesSeriesLengths) {
         if (count > up_interval[counter] || count < down_interval[counter]) {
-            return false; // Exit the function immediately if a series is outside the interval
+            return false; 
         }
         counter++;
     }
 
-    counter = 0; // Reset the counter for zeros series lengths
+    counter = 0; 
 
     for (int count : zerosSeriesLengths) {
         if (count > up_interval[counter] || count < down_interval[counter]) {
-            return false; // Exit the function immediately if a series is outside the interval
+            return false;
         }
         counter++;
     }
